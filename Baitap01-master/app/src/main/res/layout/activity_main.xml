@@ -1,0 +1,130 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#EAF3FF">
+
+    <!-- CircleImageView -->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/studentImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/anh"
+        app:civ_border_color="#FFFFFF"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@id/studentName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <!-- Tên sinh viên -->
+    <TextView
+        android:id="@+id/studentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lại Hoàng Phúc Khải"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/studentImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Thông tin sinh viên -->
+    <TextView
+        android:id="@+id/studentInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sinh viên Khoa CNTT - ĐHSPKT HCM"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/studentName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button Ẩn tiêu đề -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ẩn tiêu đề"
+        app:layout_constraintTop_toBottomOf="@id/studentInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- EditText để nhập mảng số -->
+    <EditText
+        android:id="@+id/editTextArray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập các số cách nhau bằng dấu phẩy"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Button để xử lý mảng -->
+    <Button
+        android:id="@+id/buttonArray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phân loại số chẵn và lẻ"
+        app:layout_constraintTop_toBottomOf="@id/editTextArray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView hiển thị kết quả -->
+    <TextView
+        android:id="@+id/textViewArrayResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kết quả sẽ hiển thị ở đây"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/buttonArray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- EditText nhập chuỗi ký tự -->
+    <EditText
+        android:id="@+id/editTextString"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập chuỗi ký tự"
+        app:layout_constraintTop_toBottomOf="@id/textViewArrayResult"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Button xử lý chuỗi -->
+    <Button
+        android:id="@+id/buttonString"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đảo ngược và In hoa"
+        app:layout_constraintTop_toBottomOf="@id/editTextString"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- TextView hiển thị chuỗi kết quả -->
+    <TextView
+        android:id="@+id/textViewStringResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Kết quả sẽ hiển thị ở đây"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/buttonString"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
